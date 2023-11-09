@@ -75,7 +75,7 @@ void LOLIN_HP303B::begin(SPIClass &bus, int32_t chipSelect)
  * 					0 if HP303B is connected with 4-wire SPI (standard)
  */
 void LOLIN_HP303B::begin(SPIClass &bus, int32_t chipSelect, uint8_t threeWire)
-{
+{/*
 	//this flag will show if the initialization was successful
 	m_initFail = 0U;
 
@@ -107,6 +107,7 @@ void LOLIN_HP303B::begin(SPIClass &bus, int32_t chipSelect, uint8_t threeWire)
 	}
 
 	init();
+ */
 }
 
 /**
