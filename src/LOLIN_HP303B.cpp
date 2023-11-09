@@ -75,7 +75,7 @@ void LOLIN_HP303B::begin(SPIClass &bus, int32_t chipSelect)
  * 					0 if HP303B is connected with 4-wire SPI (standard)
  */
 void LOLIN_HP303B::begin(SPIClass &bus, int32_t chipSelect, uint8_t threeWire)
-{/*
+{
 	//this flag will show if the initialization was successful
 	m_initFail = 0U;
 
@@ -86,7 +86,7 @@ void LOLIN_HP303B::begin(SPIClass &bus, int32_t chipSelect, uint8_t threeWire)
 
 	// Init bus
 	m_spibus->begin();
-	m_spibus->setDataMode(SPI_MODE3);
+	//m_spibus->setDataMode(SPI_MODE3); Arduino M0 (SAMD21) bug fix
 
 	pinMode(m_chipSelect, OUTPUT);
 	digitalWrite(m_chipSelect, HIGH);
@@ -107,7 +107,7 @@ void LOLIN_HP303B::begin(SPIClass &bus, int32_t chipSelect, uint8_t threeWire)
 	}
 
 	init();
- */
+ 
 }
 
 /**
